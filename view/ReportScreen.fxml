@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="614.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportScreen">
+   <children>
+      <TabPane layoutX="25.0" layoutY="19.0" prefHeight="415.0" prefWidth="574.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Contact">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="575.0">
+                     <children>
+                        <TableView fx:id="ContactReportTableView" layoutY="51.0" prefHeight="314.0" prefWidth="568.0" style="-fx-border-color: blue;">
+                          <columns>
+                              <TableColumn fx:id="AppIdContact" prefWidth="94.0" text="Appointment ID">
+                              </TableColumn>
+
+                              <TableColumn fx:id="TitleColumnContact" prefWidth="94.0" text="Title">
+                              </TableColumn>
+
+                              <TableColumn fx:id="descriptionColumnContact" prefWidth="94.0" text="Description">
+                              </TableColumn>
+
+                              <TableColumn fx:id="TypeColumnContact" prefWidth="94.0" text="Type">
+                              </TableColumn>
+
+                              <TableColumn fx:id="StartColumnContact" prefWidth="130.0" text="Start">
+                              </TableColumn>
+
+                              <TableColumn fx:id="EndColumnContact" prefWidth="130.0" text="End">
+                              </TableColumn>
+
+                              <TableColumn fx:id="CustomerIDColumnContact" prefWidth="94.0" text="Customer ID">
+                              </TableColumn>
+
+
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="ContactNameComboBox" layoutX="418.0" layoutY="14.0" onAction="#ChangeContact" prefWidth="150.0" promptText="Contacts" style="-fx-background-color: white; -fx-border-color: black;" />
+                        <Label layoutY="11.0" prefHeight="33.0" prefWidth="159.0" text="Contact Reports">
+                           <font>
+                              <Font name="Futura Medium" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Appointment">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ReportTypeTableView" layoutX="59.0" layoutY="65.0" prefHeight="300.0" prefWidth="191.0" style="-fx-border-color: blue; -fx-background-color: white;">
+                          <columns>
+                              <TableColumn fx:id="TypeColumn" prefWidth="94.0" text="Type">
+                              </TableColumn>
+
+                              <TableColumn fx:id="ReportTypeTotalColumn" prefWidth="94.0" text="Total">
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="reportMonthTableView" layoutX="330.0" layoutY="65.0" prefHeight="300.0" prefWidth="193.0" style="-fx-border-color: black; -fx-background-color: white;">
+                          <columns>
+                              <TableColumn fx:id="reportMonthCOlumn" prefWidth="94.0" text="Month">
+                              </TableColumn>
+
+                              <TableColumn fx:id="reportMonthTotalcolumn" prefWidth="94.0" text="Total ">
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                        <Label layoutX="59.0" layoutY="27.0" prefHeight="30.0" prefWidth="140.0" text=" Type Report">
+                           <font>
+                              <Font name="Futura Medium" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="328.0" layoutY="27.0" prefHeight="30.0" prefWidth="195.0" text="Month Report">
+                           <font>
+                              <Font name="Futura Medium" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Country">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="CountryReportTableView" layoutY="51.0" prefHeight="310.0" prefWidth="448.0" style="-fx-background-color: white; -fx-border-color: blue;">
+                          <columns>
+                              <TableColumn fx:id="TotalCountColumn" prefWidth="94.0" text="Total">
+                              </TableColumn>
+
+                              <TableColumn fx:id="CountryNameColumn" prefWidth="94.0" text="Country">
+                              </TableColumn>
+
+
+                          </columns>
+                        </TableView>
+                        <Label layoutX="6.0" layoutY="14.0" text="Country Report">
+                           <font>
+                              <Font name="Futura Medium" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="ViewCustomerButton" layoutX="25.0" layoutY="434.0" mnemonicParsing="false" onAction="#ViewCustomerButtonClicked" style="-fx-background-color: white; -fx-border-color: black;" text="Customers" />
+      <Button fx:id="ViewAppointmentButton" layoutX="107.0" layoutY="434.0" mnemonicParsing="false" onAction="#ViewAppointmentBUttonClicked" style="-fx-background-color: white; -fx-border-color: black;" text="Appointment" />
+      <Button fx:id="ExitButton" layoutX="200.0" layoutY="434.0" mnemonicParsing="false" onAction="#ExitButtonClicked" prefHeight="27.0" prefWidth="91.0" style="-fx-background-color: white; -fx-border-color: black;" text="Exit" />
+   </children>
+</AnchorPane>

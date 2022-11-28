@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentScreen">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane prefHeight="513.0" prefWidth="906.0" style="-fx-background-color: WHITE;">
+         <children>
+            <TableView fx:id="AppointmentTable" layoutX="6.0" layoutY="8.0" prefHeight="498.0" prefWidth="601.0" style="-fx-border-color: blue; -fx-background-color: white;">
+              <columns>
+
+                  <TableColumn fx:id="AppId" prefWidth="94.0" text="Appointment ID">
+                </TableColumn>
+
+                  <TableColumn fx:id="TitleColumn" prefWidth="94.0" text="Title">
+                  </TableColumn>
+
+                  <TableColumn fx:id="descriptionColumn" prefWidth="94.0" text="Description">
+                  </TableColumn>
+
+                  <TableColumn fx:id="locationColumn" prefWidth="94.0" text="Location">
+                  </TableColumn>
+
+                  <TableColumn fx:id="TypeColumn" prefWidth="94.0" text="Type">
+                  </TableColumn>
+
+                  <TableColumn fx:id="StartColumn" prefWidth="94.0" text="Start">
+                  </TableColumn>
+
+                  <TableColumn fx:id="EndColumn" prefWidth="94.0" text="End">
+                  </TableColumn>
+
+                  <TableColumn fx:id="CustomerIDColumn" prefWidth="94.0" text="Customer ID">
+                  </TableColumn>
+
+                  <TableColumn fx:id="USERIDColumn" prefWidth="94.0" text="User ID">
+                  </TableColumn>
+
+                  <TableColumn fx:id="ContactIDColumn" prefWidth="94.0" text="Contact ID">
+                  </TableColumn>
+
+
+              </columns>
+            </TableView>
+
+
+            <GridPane layoutX="619.0" layoutY="23.0" prefHeight="388.0" prefWidth="283.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="129.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="160.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="173.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="389.0" minHeight="0.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="332.0" minHeight="0.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="361.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="372.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+
+                  <TextField fx:id="AppidText" prefHeight="26.0" prefWidth="178.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="titleText" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="descriptionText" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="locationText" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                  <TextField fx:id="typeText" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <DatePicker fx:id="startDatePicker" prefHeight="26.0" prefWidth="165.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <DatePicker fx:id="EndDatePicker" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+                  <ComboBox fx:id="startTimeComboBox" prefHeight="26.0" prefWidth="165.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <ComboBox fx:id="endTimeComboBox" prefHeight="26.0" prefWidth="166.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <ComboBox fx:id="appointmentContactComboBox" prefHeight="24.0" prefWidth="164.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                   <ComboBox fx:id="CustomerIdComboBox" prefHeight="26.0" prefWidth="159.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                   <ComboBox fx:id="UserIdComboBox" prefHeight="26.0" prefWidth="159.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+
+                   <Label fx:id="idLabel" text="App ID:" GridPane.rowIndex="1" />
+                   <Label fx:id="typeLabel" text="Title:" GridPane.rowIndex="2" />
+                   <Label fx:id="locationLabel" text="Description:" GridPane.rowIndex="3" />
+                   <Label fx:id="startLabel" text="Location:" GridPane.rowIndex="4" />
+                   <Label text="Type:" GridPane.rowIndex="5" />
+                   <Label text="Start: Date:" GridPane.rowIndex="6" />
+                   <Label text="End Date:" GridPane.rowIndex="8" />
+                   <Label text="Customer Id:" GridPane.rowIndex="10" />
+                   <Label text="User_Id:" GridPane.rowIndex="11" />
+                   <Label fx:id="ContactLabel" prefHeight="17.0" prefWidth="129.0" text="Appointment Contact:" GridPane.rowIndex="12" />
+                   <Label text="Start Time" GridPane.rowIndex="7" />
+                   <Label text="End Time" GridPane.rowIndex="9" />
+
+
+
+
+                  
+               </children>
+            </GridPane>
+            <Button fx:id="AddButton" layoutX="611.0" layoutY="445.0" mnemonicParsing="false" onAction="#AddAppointmentButtonClicked" prefHeight="28.0" prefWidth="96.0" style="-fx-border-color: black;" text="Add" />
+            <Button fx:id="UpdateButton" layoutX="807.0" layoutY="445.0" mnemonicParsing="false" onAction="#updateButtonClicked" prefHeight="28.0" prefWidth="96.0" style="-fx-border-color: black;" text="Update" />
+            <Button fx:id="DeleteButton" layoutX="709.0" layoutY="445.0" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="26.0" prefWidth="96.0" style="-fx-border-color: black;" text="Delete" />
+            <Button fx:id="viewCustomersButton" layoutX="807.0" layoutY="476.0" mnemonicParsing="false" onAction="#viewCustomersButtonClick" prefHeight="25.0" prefWidth="96.0" style="-fx-border-color: black;" text="Customers" />
+            <Button fx:id="Exitbutton" layoutX="611.0" layoutY="476.0" mnemonicParsing="false" onAction="#ExitButtonClick" prefHeight="28.0" prefWidth="96.0" style="-fx-border-color: black;" text="Exit" />
+            <Button fx:id="FormButton" layoutX="709.0" layoutY="476.0" mnemonicParsing="false" onAction="#formButtonClick" prefHeight="25.0" prefWidth="96.0" style="-fx-border-color: black;" text="Reports" />
+            <RadioButton fx:id="WeekButton" layoutX="613.0" layoutY="419.0" mnemonicParsing="false" onAction="#WeekRadioButtonClicked" text="Week" />
+            <RadioButton fx:id="MonthRadioButton" layoutX="715.0" layoutY="419.0" mnemonicParsing="false" onAction="#MonthRadioButtonClick" text="Month" />
+            <RadioButton fx:id="AllRadioButton" layoutX="809.0" layoutY="419.0" mnemonicParsing="false" onAction="#AllRadioButtonClicked" text="All" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

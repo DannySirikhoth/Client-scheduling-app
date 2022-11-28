@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="LoginButton" layoutX="275.0" layoutY="184.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="28.0" prefWidth="80.0" style="-fx-border-color: black;" text="Login" />
+            <Button fx:id="cancelButton" layoutX="366.0" layoutY="184.0" mnemonicParsing="false" onAction="#CancelButtonClick" prefHeight="28.0" prefWidth="80.0" style="-fx-border-color: black;" text="Exit" />
+            <Label fx:id="titleLabel" layoutX="274.0" layoutY="14.0" prefHeight="57.0" prefWidth="267.0" style="-fx-background-color: black;" text="Login Form" textFill="#fffafa">
+               <font>
+                  <Font name="Futura Medium" size="24.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="274.0" layoutY="111.0" promptText="Password" style="-fx-border-color: black;" />
+            <TextField fx:id="userNameField" layoutX="274.0" layoutY="79.0" promptText="UserName" style="-fx-border-color: black;" />
+            <Label id="TimeLabel" fx:id="TimeLabel" layoutX="274.0" layoutY="145.0" prefHeight="26.0" prefWidth="247.0" text="Label" textFill="#202cd7" />
+            <Accordion layoutX="46.0" layoutY="67.0" />
+            <Pane layoutY="-8.0" prefHeight="411.0" prefWidth="267.0" style="-fx-background-color: black;">
+               <children>
+                  <Box depth="100" height="100" layoutX="84.0" layoutY="78.0" width="100" />
+                  <Polygon fill="DODGERBLUE" layoutX="151.0" layoutY="166.0" points="-50.0, 40.0, -78.5, -88.0, 63.5, -38.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label fx:id="GraphicLabel" alignment="CENTER" layoutX="2.0" layoutY="212.0" prefHeight="57.0" prefWidth="267.0" text="Danny's Client Scheduling App" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Futura Medium" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Accordion layoutX="98.0" layoutY="325.0" />
+   </children>
+</AnchorPane>
